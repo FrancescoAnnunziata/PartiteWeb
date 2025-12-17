@@ -1,0 +1,15 @@
+INSERT INTO Squadre (nome, citta) VALUES
+('Pro Recco Waterpolo', 'Recco'),
+('An Brescia Team', 'Brescia'),
+('Banco Bpm R.N. Savona', 'Savona'),
+('Ranieri Impiantistica C.N. Posillipo', 'Napoli'),
+('Pallanuoto Trieste', 'Trieste'),
+('De Akker Team', 'Bologna'),
+('Iren Genova Quinto', 'Genova'),
+('Ac Group Canottieri Napoli', 'Napoli'),
+('Training Academy Olympic Roma', 'Roma'),
+('Roma Vis Nova Pallanuoto', 'Roma'),
+('R.N. Nuoto Salerno', 'Salerno'),
+('Telimar', 'Palermo'),
+('C.C. Ortigia 1928', 'Siracusa'),
+('R.N. Florentia', 'Firenze');
