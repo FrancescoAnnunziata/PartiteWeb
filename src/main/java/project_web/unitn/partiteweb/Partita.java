@@ -2,6 +2,7 @@ package project_web.unitn.partiteweb;
 
 public class Partita {
     private int id;
+    private int giornata;
     private Squadra squadraCasa;
     private Squadra squadraTrasferta;
     private int golCasa;
@@ -13,6 +14,14 @@ public class Partita {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public int getGiornata() {
+        return giornata;
+    }
+
+    public void setGiornata(int giornata) {
+        this.giornata = giornata;
     }
 
     public Squadra getSquadraCasa() {

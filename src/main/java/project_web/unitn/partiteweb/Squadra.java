@@ -1,5 +1,7 @@
 package project_web.unitn.partiteweb;
 
+import java.util.Objects;
+
 public class Squadra {
     private int id;
     private String nome;
@@ -27,5 +29,21 @@ public class Squadra {
 
     public void setCitta(String citta) {
         this.citta = citta;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if(this == obj) {
+            return true;
+        } else if (obj == null || getClass() != obj.getClass()) {
+            return false;
+        }
+        Squadra s = (Squadra) obj;
+        return Objects.equals(id, s.id);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id);
     }
 }

@@ -1,0 +1,29 @@
+package project_web.unitn.partiteweb;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import java.util.List;
+
+/*
+TODO:
+    - Calendario partite campionato
+    - Partite giornata corrente
+    - Risultati partite giornata corrente
+ */
+@RestController
+public class MainController {
+
+    private final CalendarService calendarService;
+
+    public MainController(CalendarService calendarService) {
+        this.calendarService = calendarService;
+    }
+
+    @GetMapping("/calendar")
+    public List<Partita> getCalendar() {
+        return calendarService.getCalendario();
+    }
+
+
+}
