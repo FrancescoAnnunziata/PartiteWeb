@@ -6,12 +6,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
-/*
-TODO:
-    - Calendario partite campionato
-    - Partite giornata corrente
-    - Risultati partite giornata corrente
- */
 @RestController
 public class MainController {
 

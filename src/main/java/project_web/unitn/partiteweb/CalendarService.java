@@ -8,8 +8,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-//Servizio che fornisce il calendario delle partite di Campionato
-
 @Service
 public class CalendarService {
 
