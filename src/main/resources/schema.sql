@@ -9,6 +9,7 @@ CREATE TABLE IF NOT EXISTS Squadre (
 
 CREATE TABLE IF NOT EXISTS Partite (
     id INT PRIMARY KEY AUTO_INCREMENT,
+    giornata INT NOT NULL,
     squadra_casa_id INT NOT NULL,
     squadra_trasferta_id INT NOT NULL,
     gol_casa INT DEFAULT 0,

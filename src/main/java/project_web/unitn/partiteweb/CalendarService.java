@@ -14,12 +14,10 @@ import java.util.Random;
 public class CalendarService {
 
     private final SquadraRepository sr;
-    private final PartitaRepository pr;
     private List<Partita> calendario;
 
-    public CalendarService(SquadraRepository sr, PartitaRepository pr) {
+    public CalendarService(SquadraRepository sr) {
         this.sr = sr;
-        this.pr = pr;
         this.calendario = generateCalendar();
     }
 
