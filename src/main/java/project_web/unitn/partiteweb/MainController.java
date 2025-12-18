@@ -1,6 +1,7 @@
 package project_web.unitn.partiteweb;
 
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
@@ -25,5 +26,14 @@ public class MainController {
         return calendarService.getCalendario();
     }
 
+    @GetMapping("/today_matches")
+    public List<Partita> getTodayMatches(@RequestParam int giornata) {
+        return calendarService.getTodayMatch(giornata);
+    }
+
+    @GetMapping("/today_results")
+    public List<Partita> getTodayResults(@RequestParam int giornata) {
+        return calendarService.getTodayResults(giornata);
+    }
 
 }

@@ -5,8 +5,9 @@ public class Partita {
     private int giornata;
     private Squadra squadraCasa;
     private Squadra squadraTrasferta;
-    private int golCasa;
-    private int golTrasferta;
+    //Li metto Integer così posso renderli nulli finchè la partita non viene giocata, in modo da differenziarli da un pareggio 0-0
+    private Integer golCasa;
+    private Integer golTrasferta;
 
     public int getId() {
         return id;
@@ -40,19 +41,19 @@ public class Partita {
         this.squadraTrasferta = squadraTrasferta;
     }
 
-    public int getGolCasa() {
+    public Integer getGolCasa() {
         return golCasa;
     }
 
-    public void setGolCasa(int golCasa) {
+    public void setGolCasa(Integer golCasa) {
         this.golCasa = golCasa;
     }
 
-    public int getGolTrasferta() {
+    public Integer getGolTrasferta() {
         return golTrasferta;
     }
 
-    public void setGolTrasferta(int golTrasferta) {
+    public void setGolTrasferta(Integer golTrasferta) {
         this.golTrasferta = golTrasferta;
     }
 }
