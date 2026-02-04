@@ -8,12 +8,6 @@ import project_web.unitn.partiteweb.service.CalendarService;
 
 import java.util.List;
 
-/*
-TODO:
-    - Calendario partite campionato
-    - Partite giornata corrente
-    - Risultati partite giornata corrente
- */
 @RestController
 public class MainController {
 
