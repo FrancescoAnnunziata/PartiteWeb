@@ -1,7 +1,8 @@
-package project_web.unitn.partiteweb;
+package project_web.unitn.partiteweb.repository;
 
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
+import project_web.unitn.partiteweb.model.Squadra;
 
 import java.util.List;
 
