@@ -6,11 +6,13 @@ public class Squadra {
     private final int id;
     private final String nome;
     private final String citta;
+    private final Sport sport;
 
     public Squadra(int id, String nome, String citta) {
         this.id = id;
         this.nome = nome;
         this.citta = citta;
+        this.sport = Sport.Pallanuoto;
     }
 
     public String getNome() {
@@ -18,5 +20,8 @@ public class Squadra {
     }
     public String getCitta() {
         return citta;
+    }
+    public Sport getSport() {
+        return sport;
     }
 }

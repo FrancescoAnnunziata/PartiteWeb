@@ -8,12 +8,12 @@ public class Partita {
     private Integer golCasa;
     private Integer golTrasferta;
 
-    public Partita(int giornata, Squadra squadraCasa, Squadra squadraTrasferta) {
+    public Partita(int giornata, Squadra squadraCasa, Squadra squadraTrasferta, int golCasa, int golTrasferta) {
         this.giornata = giornata;
         this.squadraCasa = squadraCasa;
         this.squadraTrasferta = squadraTrasferta;
-        this.golCasa = null;
-        this.golTrasferta = null;
+        this.golCasa = golCasa;
+        this.golTrasferta = golTrasferta;
     }
 
     public int getGiornata() {

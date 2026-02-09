@@ -3,5 +3,6 @@ DROP TABLE IF EXISTS Squadre;
 CREATE TABLE IF NOT EXISTS Squadre (
     id INT PRIMARY KEY AUTO_INCREMENT,
     nome VARCHAR(100) NOT NULL,
-    citta VARCHAR(100) NOT NULL
+    citta VARCHAR(100) NOT NULL,
+    sport ENUM('Pallanuoto', 'Pallavolo', 'Basket') NOT NULL
 );

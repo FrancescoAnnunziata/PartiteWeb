@@ -27,6 +27,7 @@ public class CalendarService {
         List<Partita> partite = new ArrayList<>();
         int numSquadre = squadre.size();
         int numGiornate = numSquadre - 1;
+        Random r = new Random();
 
         //Setto le partite di andata con il Round-Robin
         for(int giornata = 1; giornata <= numGiornate; giornata++) {
@@ -34,7 +35,7 @@ public class CalendarService {
                 Squadra casa = squadre.get(i);
                 Squadra trasferta = squadre.get(numSquadre - 1 - i);
 
-                Partita partita = new Partita(giornata, casa, trasferta);
+                Partita partita = new Partita(giornata, casa, trasferta, r.nextInt(20), r.nextInt(20));
                 partite.add(partita);
             }
             squadre.add(1, squadre.remove(numSquadre - 1));
@@ -44,7 +45,7 @@ public class CalendarService {
         int numPartiteAndata = partite.size();
         for (int i = 0; i < numPartiteAndata; i++) {
             Partita partitaAndata = partite.get(i);
-            Partita partitaRitorno = new Partita(partitaAndata.getGiornata() + numGiornate, partitaAndata.getSquadraTrasferta(), partitaAndata.getSquadraCasa());
+            Partita partitaRitorno = new Partita(partitaAndata.getGiornata() + numGiornate, partitaAndata.getSquadraTrasferta(), partitaAndata.getSquadraCasa(),  r.nextInt(20), r.nextInt(20));
             partite.add(partitaRitorno);
         }
 
@@ -67,12 +68,6 @@ public class CalendarService {
 
     public List<Partita> getTodayResults(int giornata) {
         List<Partita> partite = getTodayMatch(giornata);
-        Random r = new Random();
-
-        for(Partita p : partite) {
-            p.setGolCasa(r.nextInt(20));
-            p.setGolTrasferta(r.nextInt(20));
-        }
         return partite;
     }
 }
